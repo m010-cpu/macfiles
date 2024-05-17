@@ -1,0 +1,68 @@
+# Default Layout (bsp/stack/float)
+yabai -m config layout bsp
+
+# New window spawns to the right if vertical split, or bottom if horizontal split
+yabai -m config window_placement second_child
+
+# MenuBar Settings
+yabai -m config external_bar all:32:0
+
+# Window Padding
+yabai -m config top_padding 12
+yabai -m config bottom_padding 12
+yabai -m config left_padding 12
+yabai -m config right_padding 12
+yabai -m config window_gap 12
+
+# Mouse Settings
+yabai -m config mouse_follows_focus on
+yabai -m config mouse_modifier alt
+yabai -m config mouse_action1 move
+yabai -m config mouse_action2 resize
+yabai -m mouse_drop_action swap
+
+# Enable Notifications
+yabai -m config window_autofloat NCCenter off
+
+# Disabled Apps
+yabai -m rule --add app="^System Settings$" manage=off
+yabai -m rule --add app="^Finder$" manage=off
+yabai -m rule --add app="^Karabiner-Elements$" manage=off
+yabai -m rule --add app="^Calculator$" manage=off
+yabai -m rule --add app="^Discord$" manage=off
+yabai -m rule --add app="^WeChat$" manage=off
+yabai -m rule --add app="^IVPN$" manage=off
+yabai -m rule --add app="^Windscribe$" manage=off
+yabai -m rule --add app="^CleanMyMac X$" manage=off
+yabai -m rule --add app="^Preview$" manage=off
+yabai -m rule --add app="^Calendar$" manage=off
+yabai -m rule --add app="^Downie 4$" manage=off
+yabai -m rule --add app="^Activity Monitor$" manage=off
+yabai -m rule --add app="^AlDente$" manage=off
+yabai -m rule --add app="^ToDo$" manage=off
+yabai -m rule --add app="^LuLu$" manage=off
+yabai -m rule --add app="^AppCleaner$" manage=off
+yabai -m rule --add app="^balenaEtcher$" manage=off
+yabai -m rule --add app="^RunCat$" manage=off
+yabai -m rule --add app="^IINA$" manage=off
+yabai -m rule --add app="^ReiKey$" manage=off
+yabai -m rule --add app="^OrbStack$" manage=off
+yabai -m rule --add app="^Clock$" manage=off
+yabai -m rule --add app="^Telegram$" manage=off
+yabai -m rule --add app="^TextEdit$" manage=off
+yabai -m rule --add app="^Clock$" manage=off
+yabai -m rule --add app="^Whisky$" manage=off
+yabai -m rule --add app="^Application Manager" manage=off
+yabai -m rule --add app="^WireGuard" manage=off
+yabai -m rule --add app="^Raycast" manage=off
+
+# Enabled Apps(not auto)
+yabai -m rule --add app="^/Users/m/.pyenv/shims/idle$" manage=on
+
+# Active Window
+yabai -m config window_opacity on
+yabai -m config active_window_opacity 1.0
+yabai -m config normal_window_opacity 0.1
+yabai -m config window_border off
+
+

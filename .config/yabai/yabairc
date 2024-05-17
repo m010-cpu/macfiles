@@ -1,0 +1,11 @@
+#!/usr/bin/env zsh
+
+source "$HOME/.config/yabai/yabairc-desktop"
+
+# MAIN_DISPLAY=$(system_profiler SPDisplaysDataType | grep -B 3 'Main Display:' | awk '/Display Type/ {print $3}')
+#
+# if [[ $MAIN_DISPLAY = "Built-in" ]]; then
+#     source "$HOME/.config/yabai/yabairc-laptop"
+# else
+#     source "$HOME/.config/yabai/yabairc-desktop"
+# fi

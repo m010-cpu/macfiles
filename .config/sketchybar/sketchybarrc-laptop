@@ -1,0 +1,65 @@
+#!/usr/bin/env zsh
+
+## Environment Variables 
+source "$CONFIG_DIR/colors.sh"
+source "$CONFIG_DIR/icons.sh"
+
+FONT="MesloLGS Nerd Font Mono"
+PLUGIN_DIR="$CONFIG_DIR/laptop/plugins"
+ITEM_DIR="$CONFIG_DIR/laptop/items"
+
+## Bar Settings
+
+bar=(
+  height=38
+  margin=0
+  position=top
+  display=all
+  sticky=off
+  padding_left=15
+  padding_right=15
+  notch_width=188
+  blur_radius=30
+  color=$NEO_BLUR
+)
+
+sketchybar --bar "${bar[@]}"
+
+## Default Settings
+defaults=(
+  icon.font="$FONT:Bold:14.0"
+  label.font="$FONT:Bold:14.0"
+  
+  icon.padding_right=2
+  icon.padding_left=2
+  
+  padding_left=3
+  padding_right=3
+
+  label.padding_left=3
+  label.padding_right=3
+
+  background.height=26
+  background.corner_radius=5
+  # background.border_width=2
+  # background.border_color=$NEO_BASE0
+  # background.color=$NEO_BLUE
+)
+
+sketchybar --default "${defaults[@]}"
+
+## Left Side - Items
+source $ITEM_DIR/command.sh
+source $ITEM_DIR/spaces.sh
+source $ITEM_DIR/yabai.sh
+source $ITEM_DIR/front_app.sh
+
+## Right Side - Items
+source $ITEM_DIR/calendar.sh
+source $ITEM_DIR/wifi.sh
+source $ITEM_DIR/battery.sh
+source $ITEM_DIR/status.sh
+
+## Auto Update 
+sketchybar --hotload on
+sketchybar --update

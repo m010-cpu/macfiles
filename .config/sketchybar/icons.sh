@@ -1,0 +1,28 @@
+#!/usr/bin/env zsh
+
+# Command
+CMD=󰘳
+COG=󰒓 
+CHART=󱕍
+LOCK=󰌾
+POWER=􀷄
+
+# CPU
+CPU=􀫥
+
+# RAM
+RAM=􁫏
+
+# Disk
+DISK=􀨪
+
+# WiFi
+WIFI_CONNECTED=􀙇
+WIFI_DISCONNECTED=􀙈
+
+# Yabai
+YABAI_STACK=􀏭
+YABAI_FULLSCREEN_ZOOM=􀏜
+YABAI_PARENT_ZOOM=􀥃
+YABAI_FLOAT=􀢌
+YABAI_GRID=􀧍

@@ -1,0 +1,5 @@
+# Windows Hotkey
+hyper - r : yabai -m space --rotate 270
+hyper - y : yabai -m space --mirror y-axis
+hyper - x : yabai -m space --mirror x-axis
+hyper - t : yabai -m window --toggle float --grid 4:4:1:1:2:2
