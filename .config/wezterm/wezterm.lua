@@ -1,7 +1,7 @@
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
-config.color_scheme = "iTerm2 Solarized Dark"
+config.color_scheme = "SolarizedDark (Gogh)"
 config.font = wezterm.font("MesloLGS Nerd Font")
 config.font_size = 13
 -- config.enable_tab_bar = true
@@ -12,7 +12,7 @@ config.native_macos_fullscreen_mode = true
 config.keys = {
   {
     key = "f",
-    mods = "CMD|SHIFT",
+    mods = "CTRL|CMD",
     action = wezterm.action.ToggleFullScreen,
   },
 }
@@ -31,7 +31,7 @@ config.colors = {
 }
 
 config.window_decorations = "RESIZE"
-config.window_background_opacity = 0.75
+config.window_background_opacity = 0.9
 config.macos_window_background_blur = 20
 
 config.window_close_confirmation = "NeverPrompt"

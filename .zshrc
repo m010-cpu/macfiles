@@ -102,7 +102,7 @@ source /opt/homebrew/opt/zinit/zinit.zsh
 zinit ice depth=1; zinit light romkatv/powerlevel10k
 
 zinit light zsh-users/zsh-autosuggestions
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=10"
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#586e75"
 
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-syntax-highlighting
