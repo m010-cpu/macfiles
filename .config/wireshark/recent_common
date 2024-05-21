@@ -1,4 +1,4 @@
-# Common recent settings file for Wireshark 4.2.4.
+# Common recent settings file for Wireshark 4.2.5.
 #
 # This file is regenerated each time Wireshark is quit
 # and when changing configuration profile.
@@ -6,7 +6,6 @@
 
 ######## Recent capture files (latest last), cannot be altered through command line ########
 
-recent.capture_file: /Users/m/Downloads/capture-ont.pcap
 recent.capture_file: /Users/m/Lab/ChallMaker/request_exfiltration/tcpdump/weird-request.pcap
 recent.capture_file: /Users/m/Desktop/weird-request.pcap
 recent.capture_file: /Users/m/Downloads/hackday/forensix/dump.pcap
@@ -16,6 +15,7 @@ recent.capture_file: /Users/m/Downloads/root/ch21.pcap
 recent.capture_file: /Users/m/Downloads/pearl/forensic/pcap/sus.pcap
 recent.capture_file: /Users/m/Downloads/utctf/forensic/keyboard.pcapng
 recent.capture_file: /Users/m/Downloads/404ctf/forensic/dart/dart.pcapng
+recent.capture_file: /Users/m/Downloads/rme/ospf_authentication_hash.pcapng
 
 ######## Recent capture filters (latest first), cannot be altered through command line ########
 
@@ -35,10 +35,10 @@ recent.display_filter: tcp.stream eq 15
 
 # Main window geometry.
 # Decimal numbers.
-gui.geometry_main_x: 0
-gui.geometry_main_y: 42
-gui.geometry_main_width: 1710
-gui.geometry_main_height: 1070
+gui.geometry_main_x: 12
+gui.geometry_main_y: 57
+gui.geometry_main_width: 1896
+gui.geometry_main_height: 983
 
 # Main window maximized.
 # TRUE or FALSE (case-insensitive).
