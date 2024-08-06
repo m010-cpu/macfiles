@@ -13,5 +13,9 @@ curl -L https://github.com/kvndrsslr/sketchybar-app-font/releases/download/v2.0.
 ```
 
 ```zsh
-brew install neovim wezterm iterm2 karabiner-elements atuin eza skhd sketchybar borders tmux yabai
+brew install neovim wezterm iterm2 basictex karabiner-elements atuin eza skhd sketchybar borders tmux yabai
+```
+
+```zsh
+sudo tlmgr install ajustbox booktabs cleverf glossaries-extra microtype pgfplots siunitx savetrees balance standalone
 ```

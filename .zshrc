@@ -19,6 +19,9 @@ export PATH="/opt/homebrew/opt/tcl-tk/bin:$PATH"
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 export PATH="/opt/homebrew/opt/binutils/bin:$PATH"
 
+# Go 
+export PATH=$PATH:$HOME/go/bin/
+
 # Java
 export JAVA_HOME=$(/usr/libexec/java_home -v 21)
 
@@ -145,3 +148,4 @@ alias ls="eza --icons"
 alias ll="eza -alh --icons"
 alias tree="eza --icons --tree"
 alias vim="nvim"
+alias lgit="lazygit"
