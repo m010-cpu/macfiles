@@ -1,7 +1,7 @@
 return {
     "nvim-tree/nvim-tree.lua",
     dependencies = {},
-    cmd = "NvimTreeToggle",
+    cmd = { "NvimTreeToggle", "NvimTreeFindFile" },
 
     config = function()
         local status, tree = pcall(require, "nvim-tree")
