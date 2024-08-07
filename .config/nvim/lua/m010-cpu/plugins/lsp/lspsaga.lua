@@ -2,16 +2,15 @@ return {
     "glepnir/lspsaga.nvim", -- LSP UIs
 
     config = function()
-        local status, saga = pcall(require, "lspsaga")
-        if (not status) then return end
+        local saga = require("lspsaga")
 
         saga.setup({
             ui = {
                 winblend = 10,
-                border = 'rounded',
+                border = "rounded",
                 colors = {
-                    normal_bg = '#002b36'
-                }
+                    normal_bg = "#002b36",
+                },
             },
         })
     end,

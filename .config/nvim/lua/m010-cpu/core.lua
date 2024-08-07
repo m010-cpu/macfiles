@@ -3,9 +3,9 @@ vim.cmd("autocmd!")
 local opt = vim.opt
 local g = vim.g
 
-vim.scriptencoding = 'utf-8'
-opt.encoding = 'utf-8'
-opt.fileencoding = 'utf-8'
+vim.scriptencoding = "utf-8"
+opt.encoding = "utf-8"
+opt.fileencoding = "utf-8"
 
 -- line numbers --
 opt.number = true

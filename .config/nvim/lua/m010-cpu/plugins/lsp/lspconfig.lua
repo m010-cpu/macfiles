@@ -5,6 +5,32 @@ return {
     },
 
     config = function()
+        local nvim_lsp = require("lspconfig")
+        local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
+        local signs = { Error = "󰅚 ", Warn = "󰀪 ", Hint = "󰌶 ", Info = " " }
+        for type, icon in pairs(signs) do
+            local hl = "DiagnosticSign" .. type
+            vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
+        end
+
+        vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+            underline = true,
+            update_in_insert = false,
+            virtual_text = { spacing = 4, prefix = "●" },
+            severity_sort = true,
+        })
+
+        vim.diagnostic.config({
+            virtual_text = {
+                prefix = "●",
+            },
+            update_in_insert = true,
+            float = {
+                source = "always",
+            },
+        })
+
         local augroup_format = vim.api.nvim_create_augroup("Format", { clear = true })
         local enable_format_on_save = function(_, bufnr)
             vim.api.nvim_clear_autocmds({ group = augroup_format, buffer = bufnr })
@@ -54,10 +80,6 @@ return {
             "󰘧", -- Operator
             "", -- TypeParameter
         }
-
-        local capabilities = require("cmp_nvim_lsp").default_capabilities()
-
-        local nvim_lsp = require("lspconfig")
 
         nvim_lsp.lua_ls.setup({
             on_attach = function(client, bufnr)
@@ -109,29 +131,6 @@ return {
         nvim_lsp.intelephense.setup({
             on_attach = on_attach,
             capabilities = capabilities,
-        })
-
-        vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
-            underline = true,
-            update_in_insert = false,
-            virtual_text = { spacing = 4, prefix = "●" },
-            severity_sort = true,
-        })
-
-        local signs = { Error = "󰅚 ", Warn = "󰀪 ", Hint = "󰌶 ", Info = " " }
-        for type, icon in pairs(signs) do
-            local hl = "DiagnosticSign" .. type
-            vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
-        end
-
-        vim.diagnostic.config({
-            virtual_text = {
-                prefix = "●",
-            },
-            update_in_insert = true,
-            float = {
-                source = "always",
-            },
         })
     end,
 }
