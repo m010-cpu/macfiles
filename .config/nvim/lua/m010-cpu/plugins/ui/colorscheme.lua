@@ -1,6 +1,7 @@
 return {
     "svrana/neosolarized.nvim",
     dependencies = { "tjdevries/colorbuddy.nvim" },
+    priority = 1000,
 
     config = function()
         local status, n = pcall(require, "neosolarized")
@@ -42,6 +43,6 @@ return {
         --
         Group.new("HoverBorder", colors.yellow, colors.none, styles.NONE)
 
-        vim.cmd [[ colorscheme neosolarized ]]
+        vim.cmd([[ colorscheme neosolarized ]])
     end,
 }

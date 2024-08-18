@@ -5,7 +5,9 @@ return {
 
     config = function()
         local status, tree = pcall(require, "nvim-tree")
-        if (not status) then return end
+        if not status then
+            return
+        end
 
         tree.setup({
             sort_by = "case_sensitive",
@@ -17,6 +19,11 @@ return {
             },
             filters = {
                 dotfiles = true,
+            },
+            actions = {
+                open_file = {
+                    quit_on_open = true,
+                },
             },
         })
     end,

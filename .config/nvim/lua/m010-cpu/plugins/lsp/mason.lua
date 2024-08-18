@@ -20,7 +20,7 @@ return {
             ensure_installed = {
                 "lua_ls",
                 "texlab",
-                "pyright",
+                "pylyzer",
                 "tsserver",
                 "tailwindcss",
                 "gopls",

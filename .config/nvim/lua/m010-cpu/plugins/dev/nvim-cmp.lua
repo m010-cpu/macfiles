@@ -16,6 +16,7 @@ return {
             },
         },
     },
+    event = "InsertEnter",
 
     config = function()
         local cmp = require("cmp")

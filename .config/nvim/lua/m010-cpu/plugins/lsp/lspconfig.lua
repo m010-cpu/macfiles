@@ -3,6 +3,7 @@ return {
     dependencies = {
         "hrsh7th/cmp-nvim-lsp",
     },
+    event = { "BufReadPre", "BufNewFile" },
 
     config = function()
         local nvim_lsp = require("lspconfig")

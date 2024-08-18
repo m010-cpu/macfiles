@@ -3,12 +3,15 @@ return {
     build = function()
         require("nvim-treesitter.install").update({ with_sync = true })
     end,
+    event = { "BufReadPre", "BufNewFile" },
 
     config = function()
         local status, ts = pcall(require, "nvim-treesitter.configs")
-        if (not status) then return end
+        if not status then
+            return
+        end
 
-        ts.setup {
+        ts.setup({
             auto_install = true,
             highlight = {
                 enable = true,
@@ -36,15 +39,15 @@ return {
                 "python",
                 "bash",
                 "go",
-                "vim"
+                "vim",
             },
             autotag = {
                 enable = true,
             },
             context_commentstring = {
-                enable         = true,
+                enable = true,
                 enable_autocmd = false,
-            }
-        }
+            },
+        })
     end,
 }

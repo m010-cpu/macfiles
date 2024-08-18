@@ -1,5 +1,6 @@
 return {
     "stevearc/conform.nvim",
+    event = { "BufReadPre", "BufNewFile" },
 
     config = function()
         local status, conform = pcall(require, "conform")
