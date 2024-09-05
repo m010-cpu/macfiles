@@ -100,6 +100,20 @@ return {
             },
         })
 
+        require("lspconfig").clangd.setup({
+            on_attach = on_attach,
+            cmd = {
+                "clangd",
+                "--background-index",
+                "--clang-tidy",
+                "--header-insertion=iwyu",
+                "--completion-style=detailed",
+                "--function-arg-placeholders",
+                "--fallback-style=llvm",
+                "--offset-encoding=utf-16",
+            },
+        })
+
         nvim_lsp.tsserver.setup({
             on_attach = on_attach,
             filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
