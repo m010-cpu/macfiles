@@ -10,24 +10,24 @@ config.custom_block_glyphs = false
 config.native_macos_fullscreen_mode = true
 
 config.keys = {
-  {
-    key = "f",
-    mods = "CTRL|CMD",
-    action = wezterm.action.ToggleFullScreen,
-  },
+    {
+        key = "f",
+        mods = "CTRL|CMD",
+        action = wezterm.action.ToggleFullScreen,
+    },
 }
 
 config.window_frame = {
-  font = wezterm.font({ family = "MesloLGS Nerd Font", weight = "Bold" }),
-  font_size = 12.0,
-  active_titlebar_bg = "#0e2a35",
-  inactive_titlebar_bg = "#333333",
+    font = wezterm.font({ family = "MesloLGS Nerd Font", weight = "Bold" }),
+    font_size = 12.0,
+    active_titlebar_bg = "#0e2a35",
+    inactive_titlebar_bg = "#333333",
 }
 
 config.colors = {
-  tab_bar = {
-    inactive_tab_edge = "#575757",
-  },
+    tab_bar = {
+        inactive_tab_edge = "#575757",
+    },
 }
 
 config.window_decorations = "RESIZE"

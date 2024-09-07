@@ -32,3 +32,7 @@ keymap("n", "<leader>fh", ":Telescope help_tags<CR>", { noremap = true, silent =
 
 -- Noice.nvim
 keymap("n", "<leader>ns", ":NoiceTelescope<CR>", { noremap = true, silent = true })
+
+-- LSP
+keymap("n", "<leader>dd", ":lua vim.diagnostic.open_float()<CR>", { noremap = true, silent = true })
+keymap("n", "<leader>df", ":lua vim.lsp.buf.code_action()<CR>", { noremap = true, silent = true })
